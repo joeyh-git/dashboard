@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background-color: #e8ebfdb9;
+}
+
+.dashboard-grid {
+  display: -ms-grid;
+  display: grid;
+  padding: 15px;
+  margin: 0 auto;
+  max-width: 1239px;
+  grid-auto-columns: 1fr;
+      grid-template-areas: 'blocks' 'brand' 'typography' 'rInputs' 'sInputs' 'selects' 'tAreas' 'buttons';
+  gap: 1.5rem;
+}
+
+.grid-block {
+  width: 100%;
+  padding: 15px 15px;
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px;
+  -webkit-box-shadow: #00000010 0px 1px 2px;
+          box-shadow: #00000010 0px 1px 2px;
+  background-color: #ffffff;
+}
+
+.grid-block h3 {
+  font-family: "Inter", sans-serif;
+  color: #525252;
+}
+
+.grid-block p {
+  font-family: "DM Sans", sans-serif;
+  color: #616161;
+}
+
+.grid-block .block-row {
+  display: block;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.grid-block .block-row .block-subtitle {
+  margin-bottom: 5px;
+}
+
+.grid-block .block-row input,
+.grid-block .block-row select {
+  width: 100%;
+  padding: 5px 0 5px 5px;
+  color: #616161;
+  border: 1px solid #e8ebfdb9;
+  outline: none;
+}
+
+.grid-block .button-row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.grid-block .button-row button {
+  margin: 0 5px 10px 0;
+  padding: 8px 10px;
+}
+
+.grid-block:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: blocks;
+}
+
+.grid-block:nth-child(2) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: brand;
+}
+
+.grid-block:nth-child(3) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: typography;
+}
+
+.grid-block:nth-child(4) {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: rInputs;
+}
+
+.grid-block:nth-child(5) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: sInputs;
+}
+
+.grid-block:nth-child(6) {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: selects;
+}
+
+.grid-block:nth-child(7) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  grid-area: tAreas;
+}
+
+.grid-block:nth-child(8) {
+  -ms-grid-row: 8;
+  -ms-grid-column: 1;
+  grid-area: buttons;
+}
+
+@media (min-width: 797px) {
+  .dashboard-grid {
+        grid-template-areas: 'blocks typography' 'brand typography' 'brand typography' 'rInputs sInputs' 'rInputs sInputs' 'rInputs sInputs' 'selects sInputs' 'selects tAreas' 'selects tAreas' 'selects tAreas' 'buttons buttons';
+  }
+}
+
+@media (min-width: 1239px) {
+  .dashboard-grid {
+        grid-template-areas: 'blocks brand typography' 'selects brand typography' 'selects rInputs typography' 'selects rInputs sInputs' 'selects rInputs sInputs' 'buttons tAreas sInputs' 'buttons tAreas sInputs' 'buttons tAreas .';
+  }
+}
+/*# sourceMappingURL=grid.css.map */

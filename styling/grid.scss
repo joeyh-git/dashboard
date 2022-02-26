@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap');
+$text: 'DM Sans', sans-serif;
+$title: 'Inter', sans-serif;
+$text-100: #616161;
+$text-200:#525252;
+
+$ice-100: #ffffff;
+$ice-200: #fafbfdd3;
+$ice-300: #ecefff1f;
+$ice-400: #ecefff93;
+$ice-500: #d0d7fc2d;
+$ice-600: #e8ebfdb9;
+$accent-100: #4067f9;
+$error-100: #cf03001a;
+$error-200: #c40300;
+$success-100: #acffa93a;
+$success-200: #72c96a;
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: $ice-600;
+}
+
+.dashboard-grid {
+    display: grid;
+    padding: 15px;
+    margin: 0 auto;
+    max-width: 1239px;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+        'blocks'
+        'brand'
+        'typography'
+        'rInputs'
+        'sInputs'
+        'selects'
+        'tAreas'
+        'buttons'
+    ;
+    gap: 1.5rem;
+}
+
+.grid-block {
+    width: 100%;
+    padding: 15px 15px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px;
+    box-shadow: #00000010 0px 1px 2px;
+    background-color: $ice-100;
+
+    h3 {
+        font-family: $title;
+        color: $text-200;
+    }
+
+    p {
+        font-family: $text;
+        color: $text-100;
+    }
+
+    .block-row {
+        display: block;
+        margin-top: 10px;
+        text-align: left;
+
+        .block-subtitle {
+            margin-bottom: 5px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 5px 0 5px 5px;
+            color: $text-100;
+            border: 1px solid $ice-600;
+            outline: none;
+        }
+    }
+
+    .button-row {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        button {
+            margin: 0 5px 10px 0;
+            padding: 8px 10px;
+        }
+    }
+
+    &:nth-child(1) {
+        grid-area: blocks;
+    }
+    &:nth-child(2) {
+        grid-area: brand;
+    }
+    &:nth-child(3) {
+        grid-area: typography;
+    }
+    &:nth-child(4) {
+        grid-area: rInputs;
+    }
+    &:nth-child(5) {
+        grid-area: sInputs;
+    }
+    &:nth-child(6) {
+        grid-area: selects;
+    }
+    &:nth-child(7) {
+        grid-area: tAreas;
+    }
+    &:nth-child(8) {
+        grid-area: buttons;
+    }
+}
+
+@media (min-width: 797px) {
+    .dashboard-grid {
+        grid-template-areas: 
+            'blocks typography'
+            'brand typography'
+            'brand typography'
+            'rInputs sInputs'
+            'rInputs sInputs'
+            'rInputs sInputs'
+            'selects sInputs'
+            'selects tAreas'
+            'selects tAreas'
+            'selects tAreas'
+            'buttons buttons'
+        ;
+    }
+}
+
+@media (min-width: 1239px) {
+    .dashboard-grid {
+        grid-template-areas: 
+            'blocks brand typography'
+            'selects brand typography'
+            'selects rInputs typography'
+            'selects rInputs sInputs'
+            'selects rInputs sInputs'
+            'buttons tAreas sInputs'
+            'buttons tAreas sInputs'
+            'buttons tAreas .'
+        ;
+    }
+}
